@@ -1,3 +1,19 @@
+-- Make sure that package is installed before attempting to configure it
+local ensure_installed = function()
+  local install_path = vim.fn.stdpath('data')..'/site/pack/packer/start/harpoon'
+  if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
+    return false
+  end
+  return true
+end
+
+local installed_result = ensure_installed()
+
+if not installed_result then
+    print("Harpoon is not installed! Restart nvim to complete installation...")
+    return
+end
+
 local harpoon = require("harpoon")
 
 -- REQUIRED
