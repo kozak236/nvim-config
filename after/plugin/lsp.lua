@@ -62,8 +62,8 @@ cmp.setup({
   mapping = cmp.mapping.preset.insert({
 	  ['<C-f>'] = cmp_action.luasnip_jump_forward(),
 	  ['<C-b>'] = cmp_action.luasnip_jump_backward(),
-	  ['<C-j>'] = cmp.mapping.select_prev_item(cmp_select),
-	  ['<C-k>'] = cmp.mapping.select_next_item(cmp_select),
+	  ['<C-k>'] = cmp.mapping.select_prev_item(cmp_select),
+	  ['<C-j>'] = cmp.mapping.select_next_item(cmp_select),
 	  ['<C-l>'] = cmp.mapping.confirm({ select = true }),
 	  ["<C-Space>"] = cmp.mapping.complete(),
   }),
